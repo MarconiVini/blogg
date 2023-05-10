@@ -1,0 +1,17 @@
+<!-- app/views/authors/posts/index.html.erb -->
+<h4 class="d-flex justify-content-between mb-4">
+  <span>Posts</span>
+  <%= link_to 'New Post', new_authors_post_path, class: 'btn btn-primary' %>  
+</h4>
+<% @posts.each do |post| %>
+  <%= link_to edit_authors_post_path(post), class: 'text-decoration-none' do %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title text-dark mb-1"> <%= post.title %> </h5>
+        <p class="text-secondary mb-0"> <%= post.description %> </p>
+        <%= link_to 'Destroy', [:authors, post], :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
