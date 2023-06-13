@@ -1,24 +1,10 @@
-# README
+# Main blog struture
+#Video
+https://www.youtube.com/watch?v=MCEzxY9BbiU&list=PLjItgYqIzJ9UTA9UHslUbGnfzSdA4sVAu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Post
+Post is composed by a variaty of elements. Each element could be one of 'paragraph', 'image' or 'video-embed'.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A element that has attached image is going through active storage
+In development images are being saved locally.
+In production I'll have to move those to a S3 bucket

@@ -32,7 +32,6 @@ module Authors
     # PATCH/PUT /authors/posts/1
     # PATCH/PUT /authors/posts/1.json
     def update
-      binding.pry
       if @post.update(post_params)
         redirect_to [:authors, @post], notice: 'Post was successfully updated.'
         head :no_content
@@ -60,7 +59,7 @@ module Authors
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :description)
     end
   end
 end
